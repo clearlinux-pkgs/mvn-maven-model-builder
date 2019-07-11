@@ -4,12 +4,14 @@
 #
 Name     : mvn-maven-model-builder
 Version  : 3.0
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.pom
-Source2  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.6.0/maven-model-builder-3.6.0.jar
-Source3  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.6.0/maven-model-builder-3.6.0.pom
+Source2  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.3.9/maven-model-builder-3.3.9.jar
+Source3  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.3.9/maven-model-builder-3.3.9.pom
+Source4  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.6.0/maven-model-builder-3.6.0.jar
+Source5  : https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.6.0/maven-model-builder-3.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -37,11 +39,17 @@ cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.0
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.0
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.3.9
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.3.9
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.3.9
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.3.9
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0
 
 
 %files
@@ -51,5 +59,7 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.pom
+/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.3.9/maven-model-builder-3.3.9.jar
+/usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.3.9/maven-model-builder-3.3.9.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0/maven-model-builder-3.6.0.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-model-builder/3.6.0/maven-model-builder-3.6.0.pom
